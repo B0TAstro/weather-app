@@ -154,19 +154,17 @@ h1 {
   font-weight: 700;
 }
 
-/* Style pour le conteneur de l'historique */
 .history-container {
   position: relative;
   color: white;
-  min-height: 100vh; /* Prendre toute la hauteur de la page */
+  min-height: 100vh;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden; /* Empêche l'élément enfant d'être coupé */
+  overflow: hidden;
 }
 
-/* Div qui contient l'image de fond, avec un flou appliqué uniquement à l'image */
 .history-container::before {
   content: "";
   position: absolute;
@@ -177,23 +175,20 @@ h1 {
   background-image: url('./assets/default.webp');
   background-size: cover;
   background-position: center;
-  filter: blur(6px); /* Applique le flou uniquement à l'image */
-  z-index: -1; /* Place l'image derrière le contenu */
+  filter: blur(6px);
+  z-index: -1;
 }
 
-/* Contenu du conteneur */
 .history-container .content {
   position: relative;
-  z-index: 1; /* Place le contenu devant l'image de fond */
+  z-index: 1;
 }
 
-/* Titre de l'historique */
 .history-container h2 {
   color: white;
   margin-bottom: 15px;
 }
 
-/* Liste des éléments */
 .history-container ul {
   list-style: none;
   padding: 0;
@@ -201,7 +196,6 @@ h1 {
   max-width: 600px;
 }
 
-/* Items d'historique */
 .history-item {
   display: flex;
   justify-content: space-between;
@@ -210,7 +204,11 @@ h1 {
   margin-bottom: 10px;
   border-radius: 8px;
   color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Améliore la lisibilité */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
   background-size: cover;
   background-position: center;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  visibility: hidden;
 }
